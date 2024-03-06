@@ -25,6 +25,9 @@ function calcularDado(min, max) {
 //     dado2Img.style.backgroundImage = "url(images/"+valor2+".png)";
 // }
 
+const DADOMIN = 1;
+const DADOMAX = 6;
+
 var valor1;
 var valor2;
 
@@ -35,18 +38,14 @@ var tiradas1 = 0;
 var tiradas2 = 0;
 
 function tirarDadoUno() {
-    let dadoMin = 1;
-    let dadoMax = 6;
-    valor1 = calcularDado(dadoMin, dadoMax);
+    valor1 = calcularDado(DADOMIN, DADOMAX);
     let dadoImg = document.getElementById("dado-1");
     dadoImg.style.backgroundImage = "url(images/" + valor1 + ".png)";
     tiradas1++;
 }
 
 function tirarDadoDos() {
-    let dadoMin = 1;
-    let dadoMax = 6;
-    valor2 = calcularDado(dadoMin, dadoMax);
+    valor2 = calcularDado(DADOMIN, DADOMAX);
     let dadoImg = document.getElementById("dado-2");
     dadoImg.style.backgroundImage = "url(images/" + valor2 + ".png)";
     tiradas2++;
