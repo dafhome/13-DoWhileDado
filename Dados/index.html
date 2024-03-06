@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dados</title>
+</head>
+
+<body>
+    <nav>
+        <img src="images/logo-casino.jpg" alt="logo" class="logo">
+        <img src="images/logo-casino.jpg" alt="logo" class="logo">
+        <img src="images/logo-casino.jpg" alt="logo" class="logo">
+        <img src="images/logo-casino.jpg" alt="logo" class="logo">
+        <img src="images/logo-casino.jpg" alt="logo" class="logo">
+        <h1 id="title">🎲 Batalla de dados! 🎲</h1>
+        <img src="images/logo-casino.jpg" alt="logo" class="logo">
+        <img src="images/logo-casino.jpg" alt="logo" class="logo">
+        <img src="images/logo-casino.jpg" alt="logo" class="logo">
+        <img src="images/logo-casino.jpg" alt="logo" class="logo">
+        <img src="images/logo-casino.jpg" alt="logo" class="logo">
+
+    </nav>
+    <section class="contadores">
+       
+        <h2 id="ganador-turno">Ganador</h2>
+
+    </section>
+    <section class="dados-fondo">
+        <div class="card-container">
+            <h1 id="Player1">Player 1</h1>
+            <div class="card" id="dado-1">
+                <!-- <h2>Dado 1</h2>
+                <h3 id="dado1">1</h3> -->
+            </div>
+            <button onclick=tirarDadoUno()>
+                <h2>Tirar Dados</h2>
+            </button>
+        </div>
+        <div class="card-container">
+            <h1 id="Player2">Player 2</h1>
+            <div class="card" id="dado-2">
+                <!-- <h2>Dado 2</h2>
+                <h3 id="dado2">3</h3> -->
+            </div>
+            <button onclick=tirarDadoDos()>
+                <h2>Tirar Dados</h2>
+            </button>
+        </div>
+
+    </section>
+
+    <section class="contadores">
+        <div class="ganador-turno">
+            <h2 class="" id="contUno">0</h2>
+            <h2 class="" id="contDos">0</h2>
+        </div>
+
+    </section>
+    <section id="validar">
+        <button onclick=comprobarGanador()>
+            <h2>¡Comprobar turno!</h2>
+        </button>
+
+
+    </section>
+    <script src="main.js"></script>
+</body>
+
+</html>
