@@ -4,27 +4,6 @@ function calcularDado(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-
-// function generarDados(){
-//     let dadoMin = 1;
-//     let dadoMax = 6;
-//     dado1Dom = document.getElementById("dado1");
-//     dado2Dom = document.getElementById("dado2");
-
-//     let valor1 = getRandomIntInclusive(dadoMin,dadoMax);
-//     let valor2 = getRandomIntInclusive(dadoMin,dadoMax);
-//     // console.log(valor1);
-//     // console.log(valor2);
-//     // dado1Dom.innerText = valor1;
-//     // dado2Dom.innerText = valor2;
-
-//     dado1Img = document.getElementById("dado-1");
-//     dado2Img = document.getElementById("dado-2");
-
-//     dado1Img.style.backgroundImage = "url(images/"+valor1+".png)";
-//     dado2Img.style.backgroundImage = "url(images/"+valor2+".png)";
-// }
-
 const DADOMIN = 1;
 const DADOMAX = 6;
 
