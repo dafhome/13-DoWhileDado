@@ -3,6 +3,11 @@ function calcularDado(min, max) {
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1) + min);
 }
+var ganador = document.getElementById("ganador-turno");
+let dadoImg1 = document.getElementById("dado-1");
+let dadoImg2 = document.getElementById("dado-2");
+
+
 
 const DADOMIN = 1;
 const DADOMAX = 6;
@@ -16,24 +21,43 @@ var scorePlayer2 = 0;
 var tiradas1 = 0;
 var tiradas2 = 0;
 
+function animacionUno(){
+    if (tiradas1 > 0) {
+        ganador.innerHTML = "Le toca tirar al Player1!";
+    }
+    else {
+        dadoImg1.style.backgroundImage = "url(images/animacion-dado-2.gif)";
+        setTimeout(tirarDadoUno,2500);
+    }
+    
+}
+function animacionDos(){
+    if (tiradas2 > 0) {
+        ganador.innerHTML = "Deja tirar al Player2!";
+    }
+    else {
+        dadoImg2.style.backgroundImage = "url(images/animacion-dado-3.gif)";
+        setTimeout(tirarDadoDos,2500);
+    }
+    
+}
 function tirarDadoUno() {
-    valor1 = calcularDado(DADOMIN, DADOMAX);
-    let dadoImg = document.getElementById("dado-1");
-    dadoImg.style.backgroundImage = "url(images/" + valor1 + ".png)";
-    tiradas1++;
-}
 
+        valor1 = calcularDado(DADOMIN, DADOMAX);
+        dadoImg1.style.backgroundImage = "url(images/" + valor1 + ".png)";
+        tiradas1++;
+        comprobarGanadorAuto()
+    
+}
 function tirarDadoDos() {
-    valor2 = calcularDado(DADOMIN, DADOMAX);
-    let dadoImg = document.getElementById("dado-2");
-    dadoImg.style.backgroundImage = "url(images/" + valor2 + ".png)";
-    tiradas2++;
+        valor2 = calcularDado(DADOMIN, DADOMAX);
+        dadoImg2.style.backgroundImage = "url(images/" + valor2 + ".png)";
+        tiradas2++;
+        comprobarGanadorAuto()
 }
-
 function comprobarGanador() {
-    let ganador = document.getElementById("ganador-turno");
 
-    if (tiradas1 == tiradas2 && tiradas1!=0) {
+    if (tiradas1 == tiradas2 && tiradas1 != 0) {
         if (valor1 > valor2) {
             ganador.innerText = "PLAYER1 🎉"
             scorePlayer1++;
@@ -55,13 +79,19 @@ function comprobarGanador() {
         tiradas1 = 0;
         tiradas2 = 0;
     }
-    else if (tiradas1 == 0 && tiradas2 == 0){
-        ganador.innerHTML = "Teneis que volver a tirar";
-    }
-    else if (tiradas1 > tiradas2) {
-        ganador.innerHTML = "Falta Player2";
-    }
-    else {
-        ganador.innerHTML = "Falta Player1";
+    // else if (tiradas1 == 0 && tiradas2 == 0) {
+    //     ganador.innerHTML = "Teneis que volver a tirar";
+    // }
+    // else if (tiradas1 > tiradas2) {
+    //     ganador.innerHTML = "Falta Player2";
+    // }
+    // else {
+    //     ganador.innerHTML = "Falta Player1";
+    // }
+}
+
+function comprobarGanadorAuto() {
+    if (tiradas1 > 0 || tiradas2 > 0) {
+        comprobarGanador();
     }
 }

@@ -14,7 +14,7 @@ body {
 nav {
     background-color: white;
     padding: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     border-radius: 5px;
     margin-top: 10px;
     display: flex;
@@ -52,6 +52,7 @@ section {
 #validar {
     flex-direction: column;
     margin: 0px 0px 50px 0px;
+    display: none;
 }
 #Player1,#Player2{
     font-size: 40px;
@@ -67,7 +68,6 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 
@@ -75,7 +75,7 @@ section {
     width: 300px;
     height: 300px;
     /* background-color: black; */
-    margin: 30px 0px 30px 0px;
+    margin: 50px 0px 50px 0px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,10 +94,9 @@ button {
 
 #dado-1,
 #dado-2 {
-    background-image: url(images/logo.png);
+    background-image: url(images/dado-logo-3.png);
     background-size: cover;
     background-position: center;
-
 }
 
 
