@@ -1,9 +1,5 @@
-function calcularDado(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-var ganador = document.getElementById("ganador-turno");
+
+let ganador = document.getElementById("ganador-turno");
 let dadoImg1 = document.getElementById("dado-1");
 let dadoImg2 = document.getElementById("dado-2");
 
@@ -12,14 +8,20 @@ let dadoImg2 = document.getElementById("dado-2");
 const DADOMIN = 1;
 const DADOMAX = 6;
 
-var valor1;
-var valor2;
+let valor1;
+let valor2;
 
-var scorePlayer1 = 0;
-var scorePlayer2 = 0;
+let scorePlayer1 = 0;
+let scorePlayer2 = 0;
 
-var tiradas1 = 0;
-var tiradas2 = 0;
+let tiradas1 = 0;
+let tiradas2 = 0;
+
+function calcularDado(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
 
 function animacionUno(){
     if (tiradas1 > 0) {
